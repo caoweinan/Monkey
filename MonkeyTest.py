@@ -39,7 +39,7 @@ def start(devices):
     adb.open_app(monkeyConfig.package_name, monkeyConfig.activity[0], device)
 
     # log目录
-    logDir = os.path.join("log", f"{datetime.datetime.now().strftime('%Y%m%d_%p_%H%M%S')}")
+    logDir = os.path.join("log", f"{datetime.datetime.now().strftime('%Y-%m-%d_%p_%H:%M:%S')}")
     os.makedirs(logDir)
 
     # adb log
@@ -96,9 +96,9 @@ def start_monkey(monkeyCmd, logDir):
     os.popen(cmd2)
 
     # "导出traces文件 用于分析ANR"
-    traceFilename = os.path.join(logDir, "anr_traces.log")
-    cmd3 = f"adb shell cat /data/anr/traces.txt>{traceFilename}"
-    os.popen(cmd3)
+    # traceFilename = os.path.join(logDir, "anr_traces.log")
+    # cmd3 = f"adb shell cat /data/anr/traces.txt>{traceFilename}"
+    # os.popen(cmd3)
 
 
 def killPort():
