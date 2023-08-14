@@ -8,6 +8,7 @@ class MonkeyConfig(object):
 
     # 测试app中模块的关键词
     # module_key = "com.sdpopen.wallet"
+    # module_key = "com.mymoney"
     module_key = "com.mymoney"
 
     # todo 自动找到apk中exported的activity
